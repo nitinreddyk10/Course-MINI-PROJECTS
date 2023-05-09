@@ -1,0 +1,396 @@
+:root {
+  --white: #ffffff;
+  --black: #000000;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  /* width: 100%;
+  height: 100%; */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+  padding: 5px;
+  /* position: fixed; */
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+/* Card Styling */
+.main-container {
+  position: relative;
+  top: 50px;
+  height: 500px;
+  margin-bottom: 50px;
+  /* background-color: wheat; */
+}
+
+.container {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  width: 340px;
+  height: 440px;
+  background: #040404;
+  box-shadow: 0 15px 18px rgba(179,179,179,.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow: hidden;
+  z-index: 3;
+  font-size: .9rem;
+}
+
+.profile-pic {
+  width: 130px;
+  height: 130px;
+  background: url("nitin.jpeg") 0 1px / cover;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+.layer {
+  position: absolute;
+  top: 21%;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  transition: .4s ease;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.details {
+  text-align: center;
+  color: #fff;
+  transition: .4s ease;
+}
+
+.skills {
+  font-size: 1.5rem;
+}
+
+.skills i {
+  margin: 0 .3rem;
+  opacity: 0;
+  transition: .4s ease;
+}
+
+.fa-html5 {
+  color: #e34c26;
+}
+
+.fa-css3-alt {
+  color: #0098ff;
+}
+
+.fa-js {
+  color: #f0db4f;
+}
+
+.btn a {
+  display: block;
+  text-decoration: none;
+  width: 200px;
+  height: 50px;
+  border: 1px solid #ffffff;
+  border-radius: 35px;
+  text-align: center;
+  line-height: 50px;
+  color: #ffffff;
+  letter-spacing: 2px;
+  transition: .4s ease;
+}
+
+.container:hover .layer {
+  height: 100%;
+}
+
+.container:hover .details {
+  color: #040404;
+}
+
+.container:hover .btn a {
+  border-color: #040404;
+  color: #040404;
+}
+
+.container:hover .skills i {
+  opacity: 1;
+}
+
+
+/* About me container Styling */
+
+@media screen and (max-width: 850px) {
+  .AboutContainer {
+      background-color: wheat;
+      font-size: 1.25rem;
+  }
+
+  .introContainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+
+  .imgContainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+
+}
+
+.AboutContainer {
+  background-color: wheat;
+  /* display: grid;
+  grid-template-rows: minmax(250px, max-content);
+  grid-template-columns: 40% 50%;
+  column-gap: 5%;
+  padding: 40px; */
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* margin: 25px; */
+  font-size: 1.25rem;
+}
+
+.introContainer {
+  /* grid-column: 1 / 2;
+  grid-row: 1 / 2; */
+  width: 500px;
+  height: 300px;
+  margin: 10px;
+  /* background-color: red; */
+  padding-left: 14px;
+  /* background-color: black; */
+}
+
+.imgContainer {
+  background-color: yellow;
+  /* grid-column: 2 / 3;
+  grid-row: 1 / 2; */
+  /* width: 130px; */
+  margin: 10px;
+  width: 300px;
+  height: 300px;
+  /* background-color: black; */
+  background: url("nitin.jpeg") no-repeat 1px / contain;
+}
+
+.links-container a{
+  padding: 3px;
+}
+
+
+/* Skills Container (Using Grid) */
+
+@media screen and (max-width: 1000px) {
+  .skillsContainer {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto;
+      column-gap: 25px;
+      row-gap: 20px;
+      background-color: #696969;
+      padding: 65px;    
+  }
+
+  .python, .git, .js, .cpp, .html-css{
+      width: 100%;
+      height: 100%;
+      background-color: wheat;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .contactMeContainer {
+      margin: 20px;
+  }
+
+  .mapContainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 15px;
+  }
+
+  #map {
+      width: 300px;
+      height: 300px;
+      border-radius: 8px;
+  }
+}
+
+@media screen and (min-width: 851px) {
+  .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 25px;
+  }
+  
+  .contactMeContainer {
+      width: 35%;
+      margin: 20px;
+  }
+  
+  
+  .mapContainer {
+      width: 35%;
+  }
+  
+  #map{
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+  }
+}
+
+
+.contactMeContainer h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  padding-bottom: 5%;
+}
+
+/* Contact-Info Styling - END */
+
+
+/* Footer and Logos Styling */
+
+.disabled-link {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.logos-img {
+  position: relative;
+  margin: auto;
+  background-color: black;
+}
+
+.popup-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: var(--black); */
+  background-color: #6a6978;
+}
+
+.popup-logos .logo {
+  position: relative;
+  background-color: var(--white);
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 60px;
+  height: 60px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  /* box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit; */
+  /* box-shadow: 2px 6px 14px 3px var(--black); */
+  cursor: pointer;
+
+  /* transition: property duration timing-function delay|initial|inherit; */
+  transition: all .2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.popup-logos .icon-name {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background-color: var(--white);
+  color: var(--white);
+  padding: 5px 8px;
+  
+  /* box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit; */
+  /* box-shadow: 0 10px 10px rgba(0,0,0,0.1); */
+  
+  opacity: 0;
+  pointer-events: none;
+
+  /* transition: property duration timing-function delay|initial|inherit; */
+  transition: all .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.popup-logos .icon-name::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background-color: var(--black);
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all .3s cubic-bezier(0.68,-0.55,0.265.1.55);
+}
+
+.popup-logos .instagram:hover,
+.popup-logos .instagram:hover .icon-name,
+.popup-logos .instagram:hover .icon-name::before {
+  background-color: #e1306c;
+  color: var(--white);
+}
+
+.popup-logos .mail:hover,
+.popup-logos .mail:hover .icon-name,
+.popup-logos .mail:hover .icon-name::before {
+  background-color: skyblue;
+  color: var(--white);
+}
+
+.popup-logos .github:hover,
+.popup-logos .github:hover .icon-name,
+.popup-logos .github:hover .icon-name::before {
+  background-color: black;
+  color: var(--white);
+}
+
+.popup-logos .logo:hover .icon-name {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.footer-nav a:hover {
+  text-decoration: underline;  
+}

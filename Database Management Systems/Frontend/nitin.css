@@ -1,0 +1,790 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand:400,700");
+html,
+body {
+  background:#eee;
+  font-family: Quicksand, Arial, Verdana, sans-serif;
+  font-size: 2vmin;
+  color: #444;
+}
+.home{
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+.h1{
+  color: #000;
+}
+main {
+  width: 55vmin;
+  height: 80vmin;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+h2 {
+  font-size: 1.25rem;
+  height: 5vmin;
+  line-height: 5vmin;
+  margin: 0;
+  text-align: center;
+  position: relative;
+}
+main section,
+
+main header {
+  overflow: hidden;
+  height: 7.5vmin;
+  position: relative;
+  box-sizing: border-box;
+  transition: height 1s;
+  background: #d8b453;
+}
+main header::after,
+main > div > section::after {
+  content: "";
+  position: absolute;
+  height: 2.5vmin;
+  width: 55vmin;
+  bottom: 0px;
+  left: 0;
+  background: linear-gradient(to top right, #ccc 49%, #d8b453 50%);
+}
+.contact-2 {
+  display: none;
+}
+
+main header {
+  box-shadow: inset 0 0 0 100vmin whitesmoke;
+  color: black;
+}
+main header:nth-child(1) {
+  background: #336699 top
+    center no-repeat;
+  background-size: cover;
+}
+main header::after {
+  background: linear-gradient(
+    to top right,
+    #d8b453 49%,
+    rgba(0, 0, 0, 0) 50%
+  );
+}
+main > div:first-child > section:nth-child(2)::after {
+  background: linear-gradient(to top right, #336699 49%, #d8b453 50%)
+    #d8b453;
+}
+main > div:nth-child(2) > section:nth-child(2) {
+  background: #336699;
+  color: #ddeeff;
+}
+main > div:nth-child(2) > section:nth-child(2)::after {
+  background: linear-gradient(to top right, #3caea3 49%, #336699 50%);
+}
+main > div:nth-child(2) > section:nth-child(3) {
+  background: #3caea3;
+}
+main > div:nth-child(2) > section:nth-child(3)::after {
+  background: linear-gradient(to top right, #ed553b 49%, #3caea3 50%);
+}
+main > div:nth-child(2) > section:nth-child(4) {
+  background: #ed553b;
+}
+main > div:nth-child(2) > section:nth-child(4)::after {
+  background: linear-gradient(to top right, #ed553b 49%, #ed553b 50%);
+}
+
+h1 {
+  text-align: center;
+  color: #eee;
+  transition: .5 s;
+}
+header #mydescription {
+  padding: 2rem;
+}
+
+#contact-mini a {
+  display: block;
+  text-align: center;
+  color: #fff;
+}
+input {
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
+}
+h1 label,
+h2 label,
+h3 label {
+  cursor: pointer;
+}
+#section-0:not(:checked) ~ main h1 {
+  margin-top: 0;
+}
+#section-0:checked ~ main header {
+  height: 42.5vmin;
+}
+#section-1:checked ~ main > div:nth-child(1) > section:nth-child(2) {
+  height: 42.5vmin;
+}
+#section-2:checked ~ main > div:nth-child(2) > section:nth-child(2) {
+  height: 42.5vmin;
+}
+#section-3:checked ~ main > div:nth-child(2) > section:nth-child(3) {
+  height: 42.5vmin;
+}
+#section-4:checked ~ main > div:nth-child(2) > section:nth-child(4) {
+  height: 42.5vmin;
+}
+#section-5:checked ~ main > div:nth-child(2) > section:nth-child(5) {
+  height: 42.5vmin;
+}
+h3 {
+  text-align: center;
+}
+.dept {
+  display: none;
+}
+main > div:nth-child(1) > section:nth-child(2) ul {
+  font-size: 0.9em;
+}
+main > div:nth-child(1) > section:nth-child(2) h2 {
+  width: 55vmin;
+}
+main > div:nth-child(1) > section:nth-child(2) section h3,
+main > div:nth-child(1) > section:nth-child(2) section h4,
+main > div:nth-child(1) > section:nth-child(2) section h4 span {
+  margin: 0;
+  text-align: center;
+  display: block;
+}
+main > div:nth-child(1) > section:nth-child(2) section {
+  width: 55vmin;
+  height: 33vmin;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  float: left;
+}
+
+#edu_certs-container {
+  width: 400%;
+  overflow: hidden;
+  position: absolute;
+  transition: left 0.5s;
+  left: 0;
+}
+
+main > div:nth-child(2) > section > ul {
+  padding-left: 5vmin;
+}
+main > div:nth-child(2) > section:nth-child(n + 3) > ul > li {
+  margin-top: 1rem;
+}
+
+main > div:nth-child(2) > section > ul > li a {
+  color: white;
+}
+main > div:nth-child(2) > section > ul > li a:hover {
+  text-decoration: none;
+}
+#edu_certs {
+  color: #1b3d15;
+}
+#extracurricular {
+  color: #410f28;
+}
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  right: 0.5rem;
+  overflow: hidden;
+  font-size: 3rem;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.prev {
+  right: auto;
+  left: 0.5rem;
+}
+.prev span,
+.next span {
+  position: absolute;
+  top: -100000px;
+  left: -10000px;
+}
+
+.prev:hover,
+.next:hover {
+  color: #000;
+  text-shadow: 0 -1px #fff, 1px -1px #fff, 1px 0 #fff, 1px 1px #fff,
+    0 1px #fff, -1px 1px #fff, -1px 0 #fff, -1px -1px #fff, 0 0 2px #fff;
+}
+
+#work-0:checked ~ main #edu_certs-container {
+  left: 0;
+}
+#work-1:checked ~ main #edu_certs-container {
+  left: -55vmin;
+}
+#work-2:checked ~ main #edu_certs-container {
+  left: -110vmin;
+}
+#work-3:checked ~ main #edu_certs-container {
+  left: -165vmin;
+}
+
+#languages {
+  column-count: 3;
+  font-size: 1.25rem;
+  list-style: none;
+}
+
+.educert > li > span,
+#extracurricular > ul > li > span {
+  font-size: 1.25rem;
+  color: #000;
+}
+
+main #edu_certs-container section,
+main #languages,
+main #extracurricular > ul,
+main #additional-links > ul {
+  opacity: 0;
+  margin-top: 3rem;
+  transition: all 0.75s;
+  transition-delay: 0.25s;
+}
+
+#section-1:checked ~ main #edu_certs-container section,
+#section-2:checked ~ main #languages,
+#section-3:checked ~ main #extracurricular > ul,
+#section-4:checked ~ main #additional-links > ul {
+  opacity: 1;
+  margin-top: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+  
+}
+
+@media (orientation: portrait) and (max-width: 500px) {
+  html,
+  body {
+    font-size: 2.8vmin;
+  }
+  main {
+    width: 80vmin;
+    height: 115vmin;
+  }
+  main header::after,
+  main > div > section::after {
+    width: 80vmin;
+  }
+  #section-0:checked ~ main header {
+    height: 77.5vmin;
+  }
+  #section-1:checked ~ main > div:nth-child(1) > section:nth-child(2) {
+    height: 77.5vmin;
+  }
+  #section-2:checked ~ main > div:nth-child(2) > section:nth-child(2) {
+    height: 77.5vmin;
+  }
+  #section-3:checked ~ main > div:nth-child(2) > section:nth-child(3) {
+    height: 77.5vmin;
+  }
+  #section-4:checked ~ main > div:nth-child(2) > section:nth-child(4) {
+    height: 77.5vmin;
+  }
+  #section-5:checked ~ main > div:nth-child(2) > section:nth-child(5) {
+    height: 77.5vmin;
+  }
+  main > div:nth-child(2) > section > ul {
+    padding-left: 10vmin;
+  }
+  main > div:nth-child(1) > section:nth-child(2) section {
+    width: 80vmin;
+    height: 60vmin;
+    padding: 7.5vmin;
+  }
+  #work-0:checked ~ main #experience-container {
+    left: 0;
+  }
+  #work-1:checked ~ main #experience-container {
+    left: -80vmin;
+  }
+  #work-2:checked ~ main #experience-container {
+    left: -160vmin;
+  }
+  #work-3:checked ~ main #experience-container {
+    left: -240vmin;
+  }
+  main > div:nth-child(1) > section:nth-child(2) h2 {
+    width: 80vmin;
+  }
+}
+
+@media print {
+  @page {
+    size: 900px;
+  }
+  main #experience-container section,
+  main #languages,
+  main #edu_certs > ul,
+  main #extracurricular > ul,
+  main #additional-links > ul {
+    opacity: 1;
+    margin-top: 0.75rem !important;
+  }
+  #languages li:nth-child(n + 9) {
+    display: none;
+  }
+  .educert > li > span,
+  #extracurricular > ul > li > span,
+  .educert > li > a {
+    font-size: 1rem;
+    color: #444;
+    font-weight: bold;
+  }
+  main > div:nth-child(1) > section:nth-child(2),
+  #experience-container,
+  main > div:nth-child(1) > section:nth-child(2) > h2,
+  main > div:nth-child(1) > section:nth-child(2) section,
+  main > div:nth-child(1) > section:nth-child(2) section h3,
+  main > div:nth-child(1) > section:nth-child(2) section h4 {
+    width: auto;
+    float: none;
+    padding: 0;
+    text-align: left;
+    left: 0 !important ;
+    height: auto;
+    position: relative;
+  }
+  main > div:nth-child(1) > section:nth-child(2) section h4 span {
+    display: inline-block;
+  }
+  main > div:nth-child(2) > section:nth-child(n + 3) > ul > li {
+    margin-top: inherit;
+  }
+  main > div:nth-child(1) > section:nth-child(2) ul {
+    font-size: 1em;
+  }
+  main > div:nth-child(2) > section > ul > li a {
+    color: inherit;
+  }
+  main > div:nth-child(2) > section > ul {
+    padding-left: 0;
+  }
+  .prev,
+  .next {
+    display: none !important;
+  }
+
+@media only screen and (max-width : 768px) {
+	.demo-1 .main-title {
+		font-size: 3em;
+	}
+}
+
+.large-header {
+	position: relative;
+	width: 100%;
+	background: #333;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center center;
+	z-index: 1;
+}
+
+#large-header {
+	background-image: url('https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/img/demo-1-bg.jpg');
+}
+
+.main-title {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	color: #f9f1e9;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate3d(-50%,-50%,0);
+	transform: translate3d(-50%,-50%,0);
+}
+
+  main {
+    background: #fff;
+    box-sizing: border-box;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+    margin: 2rem auto;
+    padding: 2.75rem;
+    position: relative;
+    width: auto;
+    height: auto;
+    top: auto;
+    left: auto;
+    transform: none;
+    -webkit-transform: none;
+  }
+
+  main::after {
+    display: none;
+  }
+
+  main section,
+  main header {
+    height: auto !important;
+    background: rgba(255, 255, 255, 0) !important;
+    box-shadow: none;
+    color: #000;
+    margin: auto;
+    padding: 0;
+  }
+
+  header #mydescription {
+    padding: 0;
+  }
+
+  main header::after,
+  main section::after {
+    display: none;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    line-height: 2rem;
+    font-weight: normal;
+    color: #000;
+    text-align: left;
+  }
+
+  h2 {
+    color: #47a;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+    margin-top: 1.5rem;
+    text-transform: uppercase;
+    line-height: 1.2rem;
+    height: auto;
+    text-align: left;
+  }
+
+  h3 {
+    color: #111;
+    font-size: 1.25rem;
+    margin-top: 0rem;
+    margin: 0;
+    font-weight: normal;
+    text-align: left;
+  }
+
+  h3 span.dept {
+    color: #aaa;
+    display: inline-block;
+  }
+
+  h3 span.dept::before {
+    content: "";
+    border-left: 1px solid #ccc;
+    padding-left: 0.4rem;
+  }
+
+  h4 {
+    margin: 0;
+    font-weight: normal;
+  }
+
+  h4 span.dates {
+    color: #888;
+    display: inline-block;
+  }
+
+  p {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  a {
+    color: #369;
+  }
+
+  a:hover {
+    color: #36c;
+  }
+
+  time {
+    display: inline-block;
+    min-width: 2rem;
+  }
+
+  address {
+    font-style: normal;
+    display: block;
+  }
+
+  .normal {
+    font-weight: normal;
+  }
+
+  .position {
+    margin-top: 0.75rem;
+    transition: opacity 0.7s;
+  }
+
+  .no-bullets,
+  .no-bullets ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+    color: #000;
+    font-weight: bold;
+  }
+  .no-bullets ul {
+    font-weight: normal;
+  }
+  .no-bullets span {
+    color: #666;
+  }
+
+  #contact {
+    text-align: right;
+    font-size: 0.9rem;
+  }
+
+  #phone {
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-decoration: none !important;
+  }
+
+  #location {
+    font-size: 1.1rem;
+  }
+
+  #languages {
+    column-count: 4;
+    font-size: 1rem;
+  }
+
+  #professional-experience {
+    position: relative;
+  }
+
+  .educert {
+    display: flex;
+  }
+  .educert li {
+    flex: 1;
+    align-items: start;
+    justify-content: start;
+  }
+
+  label {
+    cursor: pointer;
+  }
+
+  #contact-mini {
+    display: flex;
+    margin-top: 1rem;
+  }
+
+  #contact-mini > div {
+    font-size: 0.75rem;
+    flex: 1;
+  }
+
+  #contact-mini > div:nth-child(2) {
+    text-align: center;
+    flex: 2;
+  }
+  #contact-mini > div:last-child {
+    text-align: right;
+  }
+
+  #contact {
+    display: none;
+  }
+
+  @media all and (min-width: 630px) {
+    main {
+      max-width: 600px;
+    }
+    #contact-mini > div {
+      font-size: 1rem;
+    }
+  }
+
+  @media all and (min-width: 1000px) {
+    html,
+    body {
+      font-size: 16px;
+    }
+    main {
+      max-width: 920px;
+      display: flex;
+    }
+    main > div:first-child {
+      flex: 1;
+    }
+    main > div:last-child {
+      width: 21%;
+      margin-left: 4%;
+    }
+    #languages {
+      column-count: 1;
+    }
+    .educert {
+      display: block;
+    }
+    .educert > li:nth-child(n + 2) {
+      margin-top: 0.75rem;
+    }
+    #contact-mini {
+      display: none;
+    }
+    #contact {
+      display: block;
+    }
+    #email,
+    #website {
+      font-size: 0.9em;
+    }
+  }
+
+  @media all and (min-width: 1200px) {
+    html,
+    body {
+      font-size: 18px;
+    }
+    main {
+      max-width: 1120px;
+    }
+    #email,
+    #website {
+      font-size: 1em !important;
+    }
+  }
+  html,
+  body {
+    background: #fff;
+    font-size: 16px;
+    width: 900px;
+  }
+  a,
+  a:visited,
+  a:link,
+  a:active,
+  a:focus,
+  #languages label {
+    text-decoration: none;
+    color: #000;
+  }
+  main {
+    margin: 0;
+    max-width: 920px;
+    display: flex;
+    box-shadow: none;
+  }
+  main > div:first-child {
+    flex: 1;
+  }
+  main > div:last-child {
+    width: 21%;
+    margin-left: 4%;
+  }
+  #languages {
+    column-count: 1;
+  }
+  .educert {
+    display: block;
+  }
+  .educert > li:nth-child(n + 2) {
+    margin-top: 0.75rem;
+  }
+  .position {
+    opacity: 1 !important;
+  }
+  #contact-mini {
+    display: none;
+  }
+  #contact {
+    display: block;
+  }
+}
+
+/* trial */
+
+/* Header */
+.large-header {
+	position: relative;
+	width: 100%;
+	background: #333;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center center;
+	z-index: 1;
+}
+
+.main-title {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	color: #f9f1e9;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate3d(-50%,-50%,0);
+	transform: translate3d(-50%,-50%,0);
+}
+
+.demo-1 .main-title {
+	text-transform: uppercase;
+	font-size: 4.2em;
+	letter-spacing: 0.1em;
+}
+
+.main-title .thin {
+	font-weight: 200;
+}
+
+@media only screen and (max-width : 768px) {
+	.demo-1 .main-title {
+		font-size: 3em;
+	}
+}
+
+/* testing background */
+
+#back{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  object-fit: cover;
+}
+
+#profile_img{
+  top:15%;
+  left:75%;
+  position: fixed;
+  z-index: 1;
+}

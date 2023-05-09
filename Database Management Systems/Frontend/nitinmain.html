@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0cfdb2b343.js" crossorigin="anonymous"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="nitinmain.css">
+    <title>Nitin Page</title>
+</head>
+<body>
+    <!-- For Navbar -->
+    <nav>
+        <div class="topnav">
+            <a href="index.html">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- For About Card -->
+        <div class="main-container" id="home">
+            <div class="container">
+                <div class="profile-pic">
+                </div>
+                <div class="layer">
+                </div>
+                <div class="details">
+                    <big><b><p>Hello 👋</p></b></big>
+                    <br>
+                    <big><p>This is NITIN</p></big>
+                </div>
+                <div class="skills">
+                    <i class="fab fa-html5"></i>
+                    <i class="fab fa-css3-alt"></i>
+                    <i class="fab fa-js"></i>
+                </div>
+                <div class="btn">
+                    <a href="nitin.html"><b><I>RESUME</I></i></b></a>
+                </div>
+            </div>
+        </div>    
+
+    
+        <div class="AboutContainer" id="about">
+            <div class="introContainer">
+                <h2><b>NITIN REDDY K</b></h2>
+                <br>
+                <b>CSE Student at <a href="https://www.iiitdm.ac.in" title="IIITDM Kancheepuram" target="_blank" rel="noopener">IIITDM Kancheepuram</a></b>
+                <p>I am passionate computer science student with interest on 
+                    web development. I also like participating in competetive programming contests
+                    and building efficient algorithms.
+                </p>
+                <br>
+                <div class="links-container">
+                    <a href="mailto:cs21b2028@iiitdm.ac.in" target="_blank" class="disabled-link"><i class="fa-lg fa-solid fa-envelope"></i></a>
+                    <a href="https://github.com/NITIN017" target="_blank" class="disabled-link"><i class="fa-lg fab fa-github"></i></a>
+                    <a href="https://www.instagram.com/nitinreddyk_17/" target="_blank" class="disabled-link"><i class="fa-lg fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <br><br><br>
+
+    <div class="contact-info" id="contact">
+        <div class="contactMeContainer">
+            <h1>Contact info</h1>
+            <div class="info">
+                <i class="fa-lg fa-solid fa-phone"></i>
+                Phone: +91 9779677677
+            </div>
+            <br>
+            <div class="info">
+                <i class="fa-lg fa-solid fa-envelope"></i>
+                Email: cs21b2028@iiitdm.ac.in
+            </div>
+            <br>
+            <div class="info">
+                <i class="fa-solid fa-location-dot"></i>
+                Location: Hyderabad, Telangana, India
+            </div>
+        </div>
+        <div class="mapContainer">
+            <div id="map"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="popup-logos">
+            <a href="https://www.instagram.com/nitinreddyk_17/" class="disabled-link" target="_blank">
+                <div class="logo instagram">
+                    <div class="icon-name">Instagram</div>
+                    <span><i class= "fa-2x fab fa-instagram"></i></span>
+                </div>
+            </a>
+
+            </a>
+            <a href="https://github.com/NITIN017" class="disabled-link" target="_blank">
+                <div class="logo github">
+                    <div class="icon-name">Github</div>
+                    <span><i class= "fa-2x fab fa-github"></i></span>
+                </div>
+            </a>
+            <a href="mailto:cs21b2028@iiitdm.ac.in" class="disabled-link" target="_blank"> 
+                <div class="logo mail">
+                    <div class="icon-name">Mail</div>
+                    <span><i class="fa-2x fa-solid fa-envelope"></i></span>
+                </div>
+            </a>
+        </div>
+        <hr>
+        <div class="footer-nav">
+            <h2>Navigation</h2>
+            <ul>
+                <li><a href="index.html" class="disabled-link">Home</a></li>
+                <li><a href="#about" class="disabled-link">About</a></li>
+                <li><a href="#contact" class="disabled-link"> Contact</a></li>
+            </ul>
+        </div>
+    </footer>
+
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoidGltZXBhc3NlcjY5IiwiYSI6ImNsZWpncng2ejA2MG8zb244eWk3aTJvMTgifQ.LnVAeDJXPHEfoyYTLhIRhA';
+    var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11',
+    center: [78.474061,17.360589],
+    zoom: 11
+    });
+</script>
+    
+</body>
+</html>

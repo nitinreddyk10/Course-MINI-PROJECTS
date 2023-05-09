@@ -1,0 +1,188 @@
+body
+{
+  background-color: black;
+  color: whitesmoke;
+}
+
+p,a,h1,h2,h3,h4 {
+	margin: 0;
+	padding: 0;
+}
+
+.section-team {
+	font-family: "Poppins", sans-serif;
+	padding: 80px 0;
+}
+
+.section-team .header-section {
+	margin-bottom: 50px;
+}
+
+.section-team .header-section .title {
+    font-weight: 700;
+    font-size: 45px;
+}
+
+.section-team .single-person1 {
+	margin-top: 30px;
+	padding: 30px;
+	background-color: gray;
+	border-radius: 5px;
+}
+
+.section-team .single-person2 {
+	margin-top: 30px;
+	padding: 30px;
+	background-color: gray;
+	border-radius: 5px;
+}
+
+.section-team .single-person3 {
+	margin-top: 30px;
+	padding: 30px;
+	background-color: gray;
+	border-radius: 5px;
+}
+
+.section-team .single-person4 {
+	margin-top: 30px;
+	padding: 30px;
+	background-color: gray;
+	border-radius: 5px;
+}
+
+.section-team .single-person1:hover {
+	background: linear-gradient(to right, #016cec, #00b5f7);
+}
+
+.section-team .single-person2:hover {
+	background: linear-gradient(to right, #01ec38, #009e2f);
+}
+
+.section-team .single-person3:hover {
+	background: linear-gradient(to right, #b8ff03, #e2ff06);
+}
+
+.section-team .single-person4:hover {
+	background: linear-gradient(to right, #ff0303, #f41919);
+}
+
+.section-team .single-person1 .person-image {
+  position: relative;
+  margin-bottom: 50px;
+  border-radius: 50%;
+  border: 4px dashed transparent;
+  transition: padding .3s;
+}
+
+.section-team .single-person2 .person-image {
+  position: relative;
+  margin-bottom: 50px;
+  border-radius: 50%;
+  border: 4px dashed transparent;
+  transition: padding .3s;
+}
+
+.section-team .single-person3 .person-image {
+  position: relative;
+  margin-bottom: 50px;
+  border-radius: 50%;
+  border: 4px dashed transparent;
+  transition: padding .3s;
+}
+
+.section-team .single-person4 .person-image {
+  position: relative;
+  margin-bottom: 50px;
+  border-radius: 50%;
+  border: 4px dashed transparent;
+  transition: padding .3s;
+}
+
+.section-team .single-person1:hover .person-image {
+	padding: 12px;
+    border: 4px dashed #fff;
+}
+
+.section-team .single-person2:hover .person-image {
+	padding: 12px;
+    border: 4px dashed #fff;
+}
+
+.section-team .single-person3:hover .person-image {
+	padding: 12px;
+    border: 4px dashed #fff;
+}
+
+.section-team .single-person4:hover .person-image {
+	padding: 12px;
+    border: 4px dashed #fff;
+}
+
+.section-team .single-person1 .person-image img {
+	width: 100%;
+    border-radius: 50%;
+}
+
+.section-team .single-person2 .person-image img {
+	width: 100%;
+    border-radius: 50%;
+}
+
+.section-team .single-person3 .person-image img {
+	width: 100%;
+    border-radius: 50%;
+}
+
+.section-team .single-person4 .person-image img {
+	width: 100%;
+    border-radius: 50%;
+}
+
+.section-team .single-person .person-image .icon {
+	position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,50%);
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background: linear-gradient(to right, #016cec, #00b5f7);
+    color: #fff;
+    border-radius: 50%;
+    font-size: 24px;
+}
+
+.section-team .single-person:hover .person-image .icon {
+	background: none;
+	background-color: #fff;
+	color: #016cec;
+}
+
+.section-team .single-person .person-info .full-name {
+	margin-bottom: 10px;
+	font-size: 28px;
+    font-weight: 700;
+}
+
+.section-team .single-person .person-info .speciality {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #016cec;
+}
+
+.section-team .single-person:hover .full-name,
+.section-team .single-person:hover .speciality {
+	color: #fff;
+}
+
+.link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
