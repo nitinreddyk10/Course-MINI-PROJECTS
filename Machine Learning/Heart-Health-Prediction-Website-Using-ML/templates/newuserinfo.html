@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New user info Page</title>
+    <style>
+    body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: black;
+    color:white;
+}
+
+.signup-container {
+    background-color:black;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px violet;
+    width: 400px;
+    text-align: center;
+    color:white;
+}
+
+.signup-container h2 {
+    margin-bottom: 20px;
+    color: white;
+}
+
+.signup-form input,
+.signup-form select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.signup-form label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.signup-form .radio-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.signup-form .radio-group label {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.signup-form .radio-group input {
+    margin-left: 10px;
+
+} 
+
+.signup-form button {
+    background-color: violet;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.signup-form button:hover {
+    background-color: rgb(152, 20, 152);
+}
+input[type="email"],
+    input[type="text"],
+    input[type="tel"],
+    input[type="date"],
+    select {
+      align-items: center;
+      padding: 8px;
+      font-family: Verdana, sans-serif;
+      font-size: 16px;
+      border: 2px solid violet;
+      border-radius: 25px;
+      margin: 8px;
+      background-color:black;
+      color: white;
+      text-align: center;
+    }
+
+    .new-heading
+    {
+        font-size: 16px;
+    }
+    </style>
+</head>
+<body>
+    
+    <div class="signup-container">
+       <!-- <h2>Sign Up</h2> -->
+       <div class="new-heading">
+        <h1>History of new patient</h1>
+       <br>
+       </div>
+       
+        <form class="signup-form" action="/submit_newuserinfo" method="post">
+            
+            <div class="radio-group">
+                Do you smoke?
+                <label for="smoke-yes">Yes
+                    <input type="radio" id="smoke-yes" name="smoke" value="1" required>
+                </label>
+                <label for="smoke-no">No
+                    <input type="radio" id="smoke-no" name="smoke" value="0" required>
+                </label>
+            </div>
+
+            <div class="radio-group">
+                Do you drink alcohol?
+                <label for="drink-yes">Yes
+                    <input type="radio" id="drink-yes" name="drink" value="1" required>
+                </label>
+                <label for="drink-no">No
+                    <input type="radio" id="drink-no" name="drink" value="0" required>
+                </label>
+            </div>
+            <div class="radio-group">
+                Previous Health problems?
+                <label for="problem-yes">Yes
+                    <input type="radio" id="problem-yes" name="problem" value="1" required>
+                </label>
+                <label for="problem-no">No
+                    <input type="radio" id="problem-no" name="problem" value="0" required>
+                </label>
+            </div>
+            <div class="radio-group">
+                Do you have Diabetes?
+                <label for="problem-yes">Yes
+                    <input type="radio" id="problem-yes" name="Diabetes" value="1" required>
+                </label>
+                <label for="problem-no">No
+                    <input type="radio" id="problem-no" name="Diabetes" value="0" required>
+                </label>
+            </div>
+            <div class="radio-group">
+                Any Family History?
+                <label for="problem-yes">Yes
+                    <input type="radio" id="problem-yes" name="History" value="1" required>
+                </label>
+                <label for="problem-no">No
+                    <input type="radio" id="problem-no" name="History" value="0" required>
+                </label>
+            </div>
+            <br>
+            <br>
+            <button type="submit" onclick="redirectToNewPage()">Next</button>
+        </form>
+    </div>
+    <script>
+        function redirectToNewPage()
+         {
+          // Redirect to a new page handled by Flask
+          window.location.href = '/healthdetails';
+        }
+    </script>
+</body>
+</html>
