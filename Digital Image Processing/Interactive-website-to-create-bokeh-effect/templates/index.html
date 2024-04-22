@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bokeh effect</title>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+<style>
+    body{
+        
+        background-color: black;
+        color:azure;
+        text-align: center;
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    input
+    {
+        background-color: rgb(178, 63, 168);
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin:20px;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+
+    form {
+    background-color: #141313;
+    border: 1px solid #3a3838;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px auto;
+    max-width: 400px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    font-family: 'Poppins', sans-serif;
+    
+}
+</style>
+<body>
+    <h1>Upload your Image to get Bokeh effect</h1>
+    <form method="POST" action="/" enctype="multipart/form-data">
+        <input type="file" name="file" id="imageInput" accept=".png, .jpg, .jpeg">
+        <input type="submit" value="Upload">
+    </form>
+    <div id="imagePreview"></div>
+    <div>
+        <img src="{{ url_for('static', filename=image_path) }}" alt="Your Image">
+    </div>
+    <script>
+        // JavaScript for displaying image preview
+        document.getElementById("imageInput").addEventListener("change", function () {
+            var preview = document.getElementById("imagePreview");
+            var file = this.files[0];
+            var reader = new FileReader();
+
+            reader.onload = function () {
+                var image = new Image();
+                image.src = reader.result;
+                image.style.maxWidth = "100%"; // Adjust the maximum width as needed
+                preview.innerHTML = ""; // Clear the preview container
+                preview.appendChild(image); // Display the uploaded image
+            };
+
+            if (file) {
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+</body>
+</html>
